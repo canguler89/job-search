@@ -1,6 +1,5 @@
 const Sequelize = require('sequelize'); 
 
-// Option 1: Passing parameters separately
 module.exports = new Sequelize('codegig1', 'postgres', '123456', {
   host: 'localhost',
   dialect:'postgres',
