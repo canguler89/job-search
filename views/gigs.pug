@@ -1,0 +1,18 @@
+extend layout
+
+block content
+
+  section#gigs.container
+    h1 All Gigs
+      .gig
+        each jobGig in gigs
+          ul
+            li= jobGig.title
+            li= jobGig.technologies
+            li= jobGig.budget
+            li= jobGig.description
+            li= jobGig.contact_email
+            li 
+             a.btn.btn-reverse(href='#') Apply Now
+
+
