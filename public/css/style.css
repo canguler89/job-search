@@ -9,13 +9,14 @@
 
 * {
   box-sizing: border-box;
+  
 }
 
 body {
   font-family: 'Lato', sans-serif;
   margin: 0;
   color: #333;
-  background: #f4f4f4;
+  background: url('../img/showcase.jpg') no-repeat center center fixed / cover;
 }
 
 ul {
@@ -161,25 +162,36 @@ input[type='search'] {
 }
 
 /* Gigs */
+
 .gig {
   background: var(--bg-color);
-  border-bottom: 4px solid var(--primary-color);
   color: #fff;
   padding: 1rem;
   margin-bottom: 1rem;
   box-shadow: var(--box-shadow);
-  border : 0.5em solid black;
 }
 .gig ul {
   list-style: none;
-  border-bottom: 0.5em solid black;
+  padding: 10px;
   padding-bottom: 10px;
+  border-collapse: collapse;
+  border: 1px solid #ccc;
+  
 }
 
 .gig li {
-  margin-right: 0.5rem;
-  padding: 0.6rem;
-  
+  display: flex;
+  justify-content: flex-start;
+}
+.btn{
+  float: right;
+  padding: 7px 20px;
+  font-size: 1.06em;
+  background-color: #0796cf;
+  color: #fff;
+  border: 1px solid #0285b9;
+  cursor: pointer;
+  margin-top: 4px;
 }
 
 

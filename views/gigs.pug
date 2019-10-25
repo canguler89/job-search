@@ -3,10 +3,11 @@ extend layout
 block content
 
   section#gigs.container
-    h1 All Gigs
+    h1 All Code Jobs
       .gig
         each jobGig in gigs
           ul
+            li=jobGig.errors
             li= jobGig.title
             li= jobGig.technologies
             li= jobGig.budget

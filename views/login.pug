@@ -1,19 +1,34 @@
-extend layout
-
-block content 
-
-  h2 Login
-  if registeredSuccessfully
-    .alert.alert-success Registered successfully, please log in.
-  if loggedOutSuccessfully
-    .alert.alert-success Logged Out Successfully
-  form(method="POST" action="/loginuser")
-    .form-group
-      label(for='email') Email address
-      input#email.form-control(name="email" type='email' aria-describedby='emailHelp' placeholder='Enter email')
-      small#emailHelp.form-text.text-muted We'll never share your email with anyone else.
-    .form-group
-      label(for='password') Password
-      input#password.form-control(name="password" type='password' placeholder='Enter password')
-    button.btn.btn-primary(type='submit') Log In
-  a(href="/register") Need an account? Click here
+DOCTYPE
+head
+  meta(charset='utf-8')
+  meta(name='viewport' content='width=device-width, initial-scale=1.0, shrink-to-fit=no')
+  title LOG IN
+  link(rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap.min.css')
+  link(rel='stylesheet' href='/assets/css/styles.min.css?h=89ab3743a625052338b1ec0ea8bc662f')
+// Start: Registration Form with Photo
+.register-photo
+  // Start: Form Container
+  .form-container
+    .image-holder
+    form(method='post')
+      h2.text-center
+        strong Create
+        |  an account.
+      .form-group
+        input.form-control(type='email' name='email' placeholder='Email')
+      .form-group
+        input.form-control(type='password' name='password' placeholder='Password')
+      .form-group
+        input.form-control(type='password' name='password-repeat' placeholder='Password (repeat)')
+      .form-group
+        .form-check
+          label.form-check-label
+            input.form-check-input(type='checkbox')
+            | I agree to the license terms.
+      .form-group
+        button.btn.btn-primary.btn-block(type='submit') Sign Up
+      a.already(href='#') You already have an account? Login here.
+  // End: Form Container
+// End: Registration Form with Photo
+script(src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js')
+script(src='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.bundle.min.js')

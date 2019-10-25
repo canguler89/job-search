@@ -4,23 +4,23 @@ block content
   br
   section#add.container
     .form-wrap
-      h1 Add A Gig
+      h1 Post a Job here
       p Your contact email will be shared with registered users to apply to your gig
-      .error
-        p
+      each error in errors
+        p= error
 
       form(action='/gigs/add' method='POST')
         .input-group
-          label(for='title') Gig Title
+          label(for='title') Job Title
           input#title.input-box(type='text' name='title' placeholder='eg. Small Wordpress website, React developer' maxlength='100')
         .input-group
           label(for='technologies') Technologies Needed
           input#technologies.input-box(type='text' name='technologies' placeholder='eg. javascript, react, PHP' maxlength='100')
         .input-group
           label(for='budget') Budget (Leave blank for unknown)
-          input#budget.input-box(type='number' name='budget' placeholder='eg. 500, 5000, 10000')
+          input#budget.input-box(type='number' name='budget' placeholder='eg. 500, 5000, 10000' value='budget')
         .input-group
-          label(for='description') Gig Description
+          label(for='description') Job Description
           textarea#description.input-box(name='description' placeholder='Describe the details of the gig' rows='10')
         .input-group
           label(for='contact_email') Contact Email

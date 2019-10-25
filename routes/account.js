@@ -9,12 +9,10 @@ function checkIsLoggedIn(req, res, next) {
     res.redirect("/login");
   }
 }
-
-// router.use(doAnotherThing);
 router.use(checkIsLoggedIn);
 
 router.get("/", (req, res) => {
-  res.render("account");
+  res.render("gigs");
 });
 
 module.exports = router;
