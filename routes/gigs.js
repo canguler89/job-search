@@ -36,8 +36,6 @@ router.post('/add', (req, res) => {
   if(!title) {
     errors.push('Please add a title');
   }
-  console.log("ERRORS HERE: ")
-  console.log()
   if(!technologies) {
     errors.push('Please add some technologies');
   }
@@ -51,7 +49,6 @@ router.post('/add', (req, res) => {
   data.errors = errors
   
   if(errors.length > 0) {
-      console.log("Trying to render the paaaaaaage")
     res.render('add', data);
   } else {
     if(!budget) {

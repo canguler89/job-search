@@ -49,12 +49,10 @@ a:hover {
 /* Header */
 header {
   display: flex;
-  position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   justify-content: space-between;
-  align-items: center;
   padding: 1rem 6rem;
 }
 
@@ -74,8 +72,12 @@ header nav li {
 header {
   background: var(--bg-color);
   border-bottom: 4px solid var(--primary-color);
-  position: relative;
   box-shadow: var(--box-shadow);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 6rem;
+
 }
 
 /* Buttons */
@@ -96,11 +98,22 @@ header {
   background: var(--primary-color);
   border: 1px solid var(--primary-color);
 }
+.gig li.special {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 12px;
+  display: flex;
+  justify-content: flex-end;
+}
+.gig li.right {
+  display: flex;
+  justify-content: flex-end;
+}
 
 .btn-reverse:hover {
   background: var(--primary-hover-color);
   border: 1px solid var(--primary-hover-color);
 }
+
 
 /* Home Search */
 .search-wrap {
@@ -164,18 +177,20 @@ input[type='search'] {
 /* Gigs */
 
 .gig {
-  background: var(--bg-color);
   color: #fff;
   padding: 1rem;
   margin-bottom: 1rem;
   box-shadow: var(--box-shadow);
 }
 .gig ul {
+  background: var(--bg-color);
   list-style: none;
   padding: 10px;
   padding-bottom: 10px;
   border-collapse: collapse;
   border: 1px solid #ccc;
+  border-bottom: 4px solid var(--primary-color);
+  box-shadow: var(--box-shadow);
   
 }
 
@@ -183,8 +198,9 @@ input[type='search'] {
   display: flex;
   justify-content: flex-start;
 }
+
 .btn{
-  float: right;
+  float: inherit;
   padding: 7px 20px;
   font-size: 1.06em;
   background-color: #0796cf;
@@ -197,19 +213,15 @@ input[type='search'] {
 
 /* Form */
 .form-wrap {
-  margin: auto;
   background: var(--bg-color);
   color: #fff;
   padding: 1rem 3rem 3rem;
-  margin-top: 3rem;
   border-bottom: 4px solid var(--primary-color);
   box-shadow: var(--box-shadow);
+  margin-bottom: 100px;
+
 }
 
-.form-wrap.reg-form,
-.form-wrap.login-form {
-  width: 60%;
-}
 
 .form-wrap h1,
 .form-wrap h2,
@@ -218,10 +230,10 @@ input[type='search'] {
 }
 
 .form-wrap .btn {
+  margin-bottom: 1rem;
   margin-top: 1rem;
   display: block;
-  width: 100%;
-  text-align: center;
+  width:100%;
   font-size: 18px;
 }
 
@@ -277,6 +289,7 @@ label {
   .form-wrap.reg-form,
   .form-wrap.login-form {
     width: 80%;
+    
   }
 }
 
