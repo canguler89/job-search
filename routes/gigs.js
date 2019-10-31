@@ -5,15 +5,7 @@ const Gig = require('../models/Gig');
 const models = require('../models')
 const Squelize = require('sequelize');
 const Op = Squelize.Op;
-
-// get gig list 
-router.get('/',(req,res)=> 
-    Gig.findAll()
-        .then(gigs => res.render('gigs',{
-                gigs:gigs
-            }))
-        .catch(err => console.log(err)));
-
+const user = require('../models/user');
 
 // Display add gig form
 router.get('/add', (req, res) => {
