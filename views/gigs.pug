@@ -13,6 +13,6 @@ block content
           li= jobGig.description
           li.right= jobGig.contact_email
           li.special 
-            a.btn.btn-reverse(href='#') Apply Now
+            a.btn.btn-reverse(href=`mailto:`+ jobGig.contact_email) Apply Now
 
 
