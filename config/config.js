@@ -17,6 +17,7 @@ module.exports = {
     password: process.env.DB_PASSWORD,
     database: process.env.DB_NAME,
     host: process.env.DB_HOSTNAME,
+    connectionString: process.env.DATABASE_URL,
     dialect: "postgres",
     pool: {
       max: 5,
